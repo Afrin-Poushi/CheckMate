@@ -37,6 +37,35 @@
   }
 }
 
+/*Main starts from here*/ 
 h1.heading {
-  color: aquamarine;
+  color: chocolate;
+  text-align: left;
+  font-size: large;
+}
+
+.rightLabel {
+    float: right;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #d8d3d3;
+}
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 10px 12px;
+  text-decoration: none;
+  font-size: 16px;
+}
+.topnav a:hover {
+  background-color: #a3a2a2;
+  color: black;
+}
+.topnav a.active {
+  background-color: #2196F3;
+  color: white;
 }
