@@ -1,11 +1,8 @@
-// you will need link and withRouter from react router dom
 import {Link, withRouter} from 'react-router-dom';
 import React from 'react'; 
-// And you will need react offcanvas menu offcourse :)
-import OffcanvasMenu from 'react-offcanvas-menu-component'; 
- 
-// name you menu component and pass the location parameter 
-// that will be drilled from withRouter
+import OffcanvasMenu from 'react-offcanvas-menu-component';
+
+
 function Menu({location}) {
  
     return(
@@ -13,27 +10,30 @@ function Menu({location}) {
             Link={Link} // react-router-dom Link
             location={location} // location parameter passed from Router
             config={{
-                width: 300, // you can modify default width
-                push: true // if you want to enable push feature
+                width: 100, 
+                push: true 
             }}
-            // this is where you create your menu items
+            // this is menu items
             menu={[
                 // basic menu item
-                {text: 'Home', link: '/'}, 
- 
-                // menu item with submenu
-                {text: 'Pages', link: '/page', submenu: [ 
-                    {text: 'Page 1', link: '/page/1'},
-                    {text: 'Page 2', link: '/page/2'}
-                ]}
+                {text: 'Home', link: '/', }, 
+                {text: 'All task', link: '/', },
+                {text: 'Calander', link: '/', },
+                {text: 'Notification', link: '/', },
+                {text: 'Archieve', link: '/', },
+                {text: 'Labels', link: '/', submenu: [ 
+                    {text: 'Projects', link: '/projects'},
+                    {text: 'Tasks', link: '/tasks'}
+                ]},
+                {text: 'Settings', link: '/', },
+                {text: 'Log out', link: '/', },
+
             ]}
+            header={
+                <h3>CheckMate</h3>
+            }
         />
     )
 }
  
-
- 
-// You need to wrap export with withRouter 
-// so you can access the location prop in your component
-// and pass it to the react-offcanvas-menu
 export default withRouter(Menu);

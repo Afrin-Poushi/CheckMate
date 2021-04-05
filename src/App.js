@@ -1,9 +1,11 @@
 import React, {useState} from 'react';
 import Avatar from 'react-avatar';
 import {BrowserRouter as Router} from 'react-router-dom';
+import { FaSearch } from "react-icons/fa";
+import { FaPlusCircle } from "react-icons/fa";
+
 import './App.css';
 import Menu from './Components/Menu';
-
 
 function App() {
 
@@ -15,15 +17,14 @@ function App() {
           <h1 className="heading">CheckMate</h1>
         </div>
         
-        
         <div className="rightLabel">
-          <button type="submit" className="btn add">Add</button>
+          <button type="submit" className="btn add">Add<FaPlusCircle /></button>
           <Avatar name="Unknown" size="50" round={true} />
         </div>
         
         <form action="">
           <input type="text" id="header-search" placeholder="Search anything" />
-          <button type="submit">Search</button>
+          <button type="submit"><FaSearch /></button>
         </form>
 
         <div className="topnav">

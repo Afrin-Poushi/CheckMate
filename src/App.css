@@ -37,15 +37,16 @@
   }
 }
 
-/*Main starts from here*/ 
+/*Main starts from here*/
 h1.heading {
   color: chocolate;
   text-align: left;
   font-size: large;
+  margin-top: 45px;
 }
 
 .rightLabel {
-    float: right;
+  float: right;
 }
 
 .topnav {
@@ -66,6 +67,6 @@ h1.heading {
   color: black;
 }
 .topnav a.active {
-  background-color: #2196F3;
+  background-color: #2196f3;
   color: white;
 }
